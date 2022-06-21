@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nomatter-py/goit-react-hw-01-components/static/css/main.281980a1.css",
+    "main.js": "/nomatter-py/goit-react-hw-01-components/static/js/main.6e765e60.js",
+    "index.html": "/nomatter-py/goit-react-hw-01-components/index.html",
+    "main.281980a1.css.map": "/nomatter-py/goit-react-hw-01-components/static/css/main.281980a1.css.map",
+    "main.6e765e60.js.map": "/nomatter-py/goit-react-hw-01-components/static/js/main.6e765e60.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.281980a1.css",
+    "static/js/main.6e765e60.js"
+  ]
+}
