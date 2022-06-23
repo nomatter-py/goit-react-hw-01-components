@@ -15,6 +15,7 @@ import {
 import { GlobalStyle } from 'components/GlobalStyle/GlobalStyle';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
+  const { followers, views, likes } = stats;
   return (
     <ProfileContainer>
       <GlobalStyle />
@@ -27,15 +28,15 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       <Stats>
         <StatsItem>
           <StatsLabel>Followers</StatsLabel>
-          <StatsQuantity>{stats.followers}</StatsQuantity>
+          <StatsQuantity>{followers}</StatsQuantity>
         </StatsItem>
         <StatsItem>
           <StatsLabel>Views</StatsLabel>
-          <StatsQuantity>{stats.views}</StatsQuantity>
+          <StatsQuantity>{views}</StatsQuantity>
         </StatsItem>
         <StatsItem>
           <StatsLabel>Likes</StatsLabel>
-          <StatsQuantity>{stats.likes}</StatsQuantity>
+          <StatsQuantity>{likes}</StatsQuantity>
         </StatsItem>
       </Stats>
     </ProfileContainer>
@@ -43,9 +44,13 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
 };
 
 Profile.propTypes = {
-    username: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    stats: PropTypes.object.isRequired,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }),
 };
